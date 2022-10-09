@@ -23,7 +23,8 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public List<Student> getAllStudent() {
-		return (List<Student>) studentRepository.findAll();
+		 List<Student> studentList= (List<Student>) studentRepository.findAll();
+		 return studentList;
 	}
 
 	@Override
@@ -63,7 +64,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student getStudentByName(String name) {
+	public List<Student> getStudentByName(String name) {
 
 		return studentRepository.findBystudentName(name);
 	}

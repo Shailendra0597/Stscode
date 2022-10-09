@@ -21,7 +21,7 @@ public interface StudentService {
 
 	Student getStudentById(int id);
 
-	Student getStudentByName(String name);
+	List<Student> getStudentByName(String name);
 
 	
 }
